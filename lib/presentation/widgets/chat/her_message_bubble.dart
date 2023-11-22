@@ -17,7 +17,7 @@ class HerMessageBubble extends StatelessWidget {
           ),
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text('lorem jisdj', style: TextStyle(color: Colors.white),),
+            child: Text('Hola Mundo', style: TextStyle(color: Colors.white),),
           ),
         ),
         const SizedBox(height: 5),
@@ -42,6 +42,16 @@ class _ImageBuble extends StatelessWidget {
         width: size.width * 0.7,
         height: 150,
         fit: BoxFit.cover,
+        loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress == null) return child;
+
+            return Container(
+              width: size.width * 0.7,
+              height: 150,
+              padding: const EdgeInsets.symmetric( horizontal: 10, vertical: 5),
+              child: const Text('Mi amor está enviando una imagen'),
+            );
+          },
       )
     );
   }

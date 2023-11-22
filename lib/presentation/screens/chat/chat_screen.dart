@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -15,7 +16,7 @@ class ChatScreen extends StatelessWidget {
             backgroundImage: NetworkImage('https://a.storyblok.com/f/178900/960x539/1a76b940d8/ado-the-silent-service-mv.jpg/m/filters:quality(95)format(webp)'),
           ),
         ),
-        title: const Text('ADO bb'),
+        title: const Text('ADO ♥️'),
         centerTitle: false,
       ),
       body: const _ChatView(),
@@ -41,7 +42,9 @@ class _ChatView extends StatelessWidget {
                 },
               )
             ),
-            const Text('Hola bb')
+            
+            /// Caja de texto de mensajes
+            const MessageFieldBox(),
           ],
         ),
       ),
